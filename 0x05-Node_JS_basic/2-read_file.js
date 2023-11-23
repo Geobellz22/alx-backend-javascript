@@ -7,7 +7,7 @@ const countStudents = (path) => {
 
   try {
     const content = fs.readFileSync(path, 'utf-8');
-    const lines = content.split('\r\n');
+    const lines = content.split(/\r?\n/);
 
     for (let i = 0; i < lines.length; i += 1) {
       if (lines[i].trim() !== '') {
@@ -28,7 +28,7 @@ const countStudents = (path) => {
       }
     }
 
-    const numberOfStudents = fileLength - 1;
+    const numberOfStudents = fileLength;
     console.log(`Number of students: ${numberOfStudents}`);
 
     for (const key of Object.keys(fields)) {
@@ -42,3 +42,4 @@ const countStudents = (path) => {
 };
 
 module.exports = countStudents;
+
