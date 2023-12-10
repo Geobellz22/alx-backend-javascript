@@ -14,11 +14,12 @@
   "author": "SAHEED BELLO",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "chai": "^4.3.10",
+    "express": "^4.17.1",
+    "glob": "^10.3.10"
   },
   "devDependencies": {
     "mocha": "^9.0.0",
     "assert": "^2.0.0"
   }
 }
-
